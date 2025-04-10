@@ -1,0 +1,170 @@
+body {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    body {
+        margin: 3mm;
+        padding: 0;
+    }
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 3px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-inline: 0;
+}
+.header .header-logo p{
+    margin: 0px;
+}
+
+.header .header-div .title-div{
+    text-align: right;
+}
+
+.header .header-div .paragrafo{
+    margin-top: 0px;
+    padding-inline: 38px;
+    border: #000 solid 1.2px;
+    border-top: none;
+    text-align: center;
+}
+
+table tr th {
+    border: none;
+    text-align: left;
+    font-weight: 1;
+}
+table tr td {
+    border: #000 solid 1.2px;
+    border-top: none;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #005ca9;
+}
+
+.title.sm {
+    text-align: center;
+    font-size: 12px;
+}
+
+.title-div p {
+    margin: 0;
+}
+
+.title-div span {
+    margin-right: 45px;
+}
+
+.section-title {
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 12px;
+}
+
+.subtitulo{
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+}
+
+.tabelas-col-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 16rem;
+}
+
+.tabelas-col-2 > * {
+    flex: 1;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    font-size: 11px;
+}
+
+.small-text {
+    font-size: 9px;
+    line-height: 1.1;
+}
+
+
+.checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 15px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.checked:after {
+    content: "X";
+}
+
+.signature-line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.signature-box {
+    width: 300px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.signature-box p{
+    border-top: 1px solid #000;
+}
+
+.signature-box-autenticacao{
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: none;
+    width: 300px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+    position: relative;
+}
+
+.signature-box-autenticacao p{
+    position: absolute;
+    top: -20px;
+    background-color: #ffff;
+    width: 220px;
+    left: calc(50% - 110px);
+}

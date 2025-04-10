@@ -1,0 +1,95 @@
+{
+  "pages": [
+    {
+      "id": "home",
+      "title": "Proposta de Seguro",
+      "apoliceNumero": "3007700000011",
+      "corretora": "202108058",
+      "codigoSeguradora": "08141",
+      "propostaNumero": "8300077032560-5",
+      "nomeProponente": "USUARIO FICTICIO DA SILVA",
+      "cpf": "510.347.628-26",
+      "dataNascimento": "25/01/1982",
+      "idade": "43",
+      "numeroRg": "1234567",
+      "dataExpedicao": "05/09/2007",
+      "orgaoEmissor": "SSP",
+      "uf": "DF",
+      "sexo": "F",
+      "estadoCivil": "SOLTEIRO",
+      "email": "usuario@email.com",
+      "cep": "70700-000",
+      "logradouro": "Av. Exemplo, 123, Apto 101",
+      "bairro": "Asa Norte",
+      "cidade": "Brasília",
+      "UF": "DF",
+      "ddd_primeiro": "61",
+      "telefone_primeiro": "3344-5566",
+      "ddd_segundo": "61",
+      "telefone_segundo": "3232-7788",
+      "ddd_celular": "61",
+      "telefone_celular": "99999-0000",
+      "pagamento_tipo": "Único",
+      "pagamento_meses": "36",
+      "capital_segurado": "R$ 100.000,00",
+      "premio_total": "R$ 1.200,00",
+      "opercao_cobertura": "Financiamento",
+      "numeroContrato": "1234567890",
+      "premio_morte_causas_naturais": "R$ 600,00",
+      "premio_invalidez_permanente_acidente": "R$ 600,00",
+      "dataProposta": "03/04/2025",
+      "agencia": "1234",
+      "matricula_dv": "987654-3",
+      "beneficiarios": [
+        {
+          "nome": "Maria da Silva",
+          "parentesco": "Cônjuge",
+          "descricao": "Esposa",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "João da Silva",
+          "parentesco": "Filho",
+          "descricao": "",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "Lucas da Silva",
+          "parentesco": "Filho",
+          "descricao": "",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "Ana da Silva",
+          "parentesco": "Filha",
+          "descricao": "",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "Carlos da Silva",
+          "parentesco": "Filho",
+          "descricao": "",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "Fernanda da Silva",
+          "parentesco": "Filha",
+          "descricao": "",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "Bruno da Silva",
+          "parentesco": "Filho",
+          "descricao": "",
+          "porcentagem": "10"
+        },
+        {
+          "nome": "Juliana da Silva",
+          "parentesco": "Filha",
+          "descricao": "",
+          "porcentagem": "10"
+        }
+      ]
+    }
+  ]
+}

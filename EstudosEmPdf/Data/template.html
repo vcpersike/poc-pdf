@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <img src="file:///C:/GIT/EstudosEmPdf/EstudosEmPdf/wwwroot/caixa_vida_previdencia_2d_vertical.png" alt="CAIXA Vida e Previdência" class="logo">
+            <p>Apólice {{apoliceNumero}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <span class="title sm">Proposta de Seguro</span>
+                <p>Corretor (No. Registro - SUSEP)</p>
+            </div>
+            <p class="paragrafo">CAIXA SEGURIDADE CORRETAGEM - {{corretora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">SEGURO</p>
+                <p>Cód. Seguradora</p>
+            </div>
+            <p class="paragrafo">{{codigoSeguradora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">PRESTAMISTA</p>
+                <p>Proposta No.</p>
+            </div>
+            <p class="paragrafo">{{propostaNumero}}</p>
+        </div>
+    </div>
+
+    <div class="section-title">1. DADOS DO CLIENTE</div>
+    <table class="tabela">
+        <tr>
+            <th width="50%">Nome do Proponente</th>
+            <th width="50%">CPF</th>
+        </tr>
+        <tr>
+            <td>{{nomeProponente}}</td>
+            <td>{{cpf}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="7">Nome Social</th>
+        </tr>
+        <tr>
+            <td colspan="7">&nbsp;</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Nascimento</th>
+            <th>Idade</th>
+            <th>Número do RG</th>
+            <th>Data de Expedição</th>
+            <th>Órgão Emissor</th>
+            <th>UF</th>
+            <th>Sexo</th>
+            <th>Estado Civil</th>
+        </tr>
+        <tr>
+            <td>{{dataNascimento}}</td>
+            <td>{{idade}}</td>
+            <td>{{numeroRg}}</td>
+            <td>{{dataExpedicao}}</td>
+            <td>{{orgaoEmissor}}</td>
+            <td>{{uf}}</td>
+            <td>{{sexo}}</td>
+            <td>{{estadoCivil}}</td>
+        </tr>
+    </table>
+    <div class="subtitulo">
+        <p>Faixa de Renda</p>
+    </div>
+    <table>
+        <tr>
+            <th>Atividade Profissional</th>
+            <th>Individual</th>
+            <th>Familiar</th>
+            <th>E-mail</th>
+        </tr>
+        <tr>
+            <td>ADMINISTRADOR</td>
+            <td>5</td>
+            <td>5</td>
+            <td>{{email}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>CEP</th>
+            <th colspan="6">Endereço (Av. / Rua, nº., complemento)</th>
+        </tr>
+        <tr>
+            <td>{{cep}}</td>
+            <td colspan="6">{{logradouro}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
+        </tr>
+        <tr>
+            <td>{{bairro}}</td>
+            <td>{{cidade}}</td>
+            <td>{{UF}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>DDD</th>
+            <th>Telefone Residencial</th>
+            <th>DDD</th>
+            <th>Telefone Comercial</th>
+            <th>DDD</th>
+            <th>Telefone Celular</th>
+        </tr>
+        <tr>
+            <td>{{ddd_primeiro}}</td>
+            <td>{{telefone_primeiro}}</td>
+            <td>{{ddd_segundo}}</td>
+            <td>{{telefone_segundo}}</td>
+            <td>{{ddd_celular}}</td>
+            <td>{{telefone_celular}}</td>
+        </tr>
+    </table>
+
+    <div class="section-title">2. DADOS DO PRODUTO</div>
+    <table>
+        <tr>
+            <th>Periodicidade</th>
+            <th>Prazo de Vigência</th>
+            <th>Capital Segurado</th>
+            <th>Prêmio Total</th>
+        </tr>
+        <tr>
+            <td>{{pagamento_tipo}}</td>
+            <td>{{pagamento_meses}}</td>
+            <td>{{capital_segurado}}</td>
+            <td>{{premio_total}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Operação de Crédito</th>
+            <th>Nº de Contrato</th>
+        </tr>
+        <tr>
+            <td>{{opercao_cobertura}}</td>
+            <td>{{numeroContrato}}</td>
+        </tr>
+    </table>
+
+    <div class="section-title">3. COBERTURAS</div>
+    <table>
+        <tr>
+            <th>Cobertura</th>
+            <th>Capital Segurado</th>
+            <th>Prêmio</th>
+        </tr>
+        <tr>
+            <td>Morte por causas Naturais e Acidentais</td>
+            <td>{{capital_segurado}}</td>
+            <td>{{premio_morte_causas_naturais}}</td>
+        </tr>
+        <tr>
+            <td>Invalidez Permanente Total por Acidente</td>
+            <td>{{capital_segurado}}</td>
+            <td>{{premio_invalidez_permanente_acidente}}</td>
+        </tr>
+    </table>
+
+    <div class="section-title">4. BENEFICIÁRIOS</div>
+
+    <div class="subtitulo">
+        <p>Vide Complementação de Beneficiários em Anexo</p>
+    </div>
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <p class="small-text">Não havendo indicação expressa de Beneficiário(s), a indenização será paga por metade ao
+        cônjuge não separado judicialmente e o restante ao(s) Herdeiro(s) Legal(is) do Titular, conforme disposto no
+        artigo 792 do Código Civil Brasileiro</p>
+
+    <div class="section-title">5. FORMA DE PAGAMENTO</div>
+    <div class="tabelas-col-2">
+        <table>
+            <tr>
+                <th>Modalidade</th>
+                <th>IOF</th>
+            </tr>
+            <tr>
+                <td>Pagamento Único</td>
+                <td>0,38%</td>
+            </tr>
+        </table>
+        <div>
+            <div class="subtitulo">
+                <p><strong>DADOS DA VENDA</strong></p>
+            </div>
+            <table>
+                <tr>
+                    <th>Data Proposta</th>
+                    <th>Agência</th>
+                    <th>Matrícula - DV</th>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>3000</td>
+                    <td>005362-8</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p class="small-text">O Capital Segurado será estruturado na modalidade de capital fixo, ou seja, em que o capital
+        segurado não varia ao longo da vigência, independentemente da evolução do valor da obrigação. O Capital Segurado
+        será atualizado anualmente, com base na variação positiva do IPCA/IGBE - Índice de Preço ao Consumidor Amplo do
+        Instituto Brasileiro de Geografia e Estatística, acumulado dos últimos 12 (doze) meses que antecedemo mês
+        anterior ao aniversário do seguro.</p>
+
+    <div class="section-title">6. DECLARAÇÃO/AUTORIZAÇÃO</div>
+    <p class="text">Declaro que as informações contidas nesta Proposta são verdadeiras e completas e assumo total
+        responsabilidade pela
+        sua exatidão. <strong>TOMEI CONHECIMENTO DO TEOR DAS CONDIÇÕES GERAIS</strong>, que fazem parte integrante desta
+        Proposta, não tendo dúvidas sobre as mesmas. Estou ciente de que qualquer indenização por sinistro somente será
+        liquidada após o pagamento do prêmio devido, a caracterização do evento coberto e o seu amparo pelo presente
+        seguro e
+        que, de acordo com o artigo 766 da Lei nº 10.406/02 (Código Civil Brasileiro), se tiver omitido circunstâncias
+        que possam
+        influir na aceitação e/ou taxação do risco pela Seguradora, perderei o direito a qualquer indeniza ção, sem
+        restituição do
+        prêmio total pago.</p>
+    <p class="text"><strong>Declaro ainda reconhecer o exercício da minha opção pela contratação do Seguro Prestamista
+            bem
+            como que a origem dos recursos financeiros empregados para a contratação é lícita e oriunda do contrato de
+            crédito tomado junto à CAIXA.
+        </strong> </p>
+    <p class="text"><strong>Autorizo que o prêmio a ser devolvido pela Seguradora em virtude de eventual cancelamento do
+            Seguro Prestamista seja repassado diretamente à Caixa Econômica Federal, com a finalidade específica de
+            amortização do saldo devedor da operação financeira vinculada a este seguro, o qual será calculado na data
+            do
+            cancelamento, quando previsto no contrato de crédito?</strong></p>
+    <p>SIM (<span class="checkbox"></span>) NÃO (<span class="checkbox checked"></span>)</p>
+
+    <div class="signature-line">
+        <div class="signature-box">
+            <p>Local e Data</p>
+        </div>
+        <div class="signature-box">
+            <p>Assinatura do Proponente</p>
+        </div>
+        <div class="signature-box-autenticacao">
+            <p>Autenticação Mecânica</p>
+        </div>
+    </div>
+
+    <!-- Página 2 -->
+    <div style="page-break-before: always;"></div>
+
+    <div class="header">
+        <div class="header-logo">
+            <img src="/caixa_vida_previdencia_2d_vertical.png" alt="CAIXA Vida e Previdência" class="logo">
+            <p>Apólice {{apoliceNumero}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title sm">Proposta de Seguro</p>
+                <p>Corretor (No. Registro - SUSEP)</p>
+            </div>
+            <p class="paragrafo">CAIXA SEGURIDADE CORRETAGEM - {{corretora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">SEGURO</p>
+                <p>Cód. Seguradora</p>
+            </div>
+            <p class="paragrafo">{{codigoSeguradora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">PRESTAMISTA</p>
+                <p>Proposta No.</p>
+            </div>
+            <p class="paragrafo">{{propostaNumero}}</p>
+        </div>
+    </div>
+
+    <div class="section-title">7. PROTEÇÃO DE DADOS PESSOAIS</div>
+    <p class="text">A Caixa Vida e Previdência declara que, para o desempenho das atividades objeto do presente
+        contrato e o cumprimento de obrigações regulatórias da SUSEP - Superintendência de Seguros Privados e legais,
+        conforme a lei nº 13.709/2018 - Lei Geral de Proteção de Dados Pessoais (LGPD), realizará as tarefas relativas
+        ao tratamento dos dados pessoais do cliente, de seus dependentes e beneficiários indicados, por si só ou pelas
+        empresas parceiras, no que se refere às informações relacionadas aos dados coletados na proposta, pelo prazo de
+        duração deste contrato e pelos prazos legais e regulatórios estabelecidos, contados do término do contrato. Seus
+        dados pessoais podem ser utilizados também na hipótese de haver o legítimo interesse da Caixa Vida e Previdência
+        e de suas empresas coligadas, sempre respeitando a sua expectativa quanto a esse uso. <strong>
+            Com a assinatura deste
+            contrato a Caixa Vida e Previdência pode compartilhar os seus dados pessoais para ofertar outros produtos do
+            seu
+            portfólio, para viabilizar a oferta de produtos e serviços do Conglomerado CAIXA e parceiros, a fim de
+            atender
+            as finalidades previstas neste Contrato e na Política de Privacidade de Dados da CAIXA Vida e Previdência, e
+            permitir a avaliação, manutenção e aprimoramento dos serviços prestados.
+        </strong> Os seus dados pessoais são
+        compartilhados apenas quando estritamente necessário, com a mais absoluta segurança, obedecendo com rigor a
+        legislação aplicável. Havendo qualquer alteração não prevista no tratamento dos dados pessoais coletados, a
+        Caixa Vida e Previdência informará ao cliente. Para obter mais detalhes sobre como utilizamos seus dados
+        pessoais, sobre os parceiros envolvidos e para exercer os direitos listados na LGPD o cliente pode acessar nossa
+        Política de Privacidade, publicada no site www.caixavidaeprevidencia.com.br.</p>
+
+    <div class="section-title">8. PESSOA POLITICAMENTE EXPOSTA - PEP</div>
+    <p class="text">De acordo com a Circular SUSEP 612/2020, artigo 4º, consideram-se expostas politicamente as
+        pessoas naturais que ocupem ou tenham ocupado, nos 5 (cinco) anos anteriores, empregos ou funções públicas
+        relevantes, assim como funções relevantes em organizações internacionais. No caso de enquadramento na condição
+        de Pessoa Politicamente Exposta - PEP é obrigatório informar a origem de recursos.</p>
+
+    <table>
+        <tr>
+            <th>PEP</th>
+            <th>Declaração de Origem de Recursos</th>
+        </tr>
+        <tr>
+            <td>Não</td>
+            <td></td>
+        </tr>
+    </table>
+    <div class="subtitulo">
+        <p><strong>O Segurado poderá consultar as condições contratuais ou regulamento do produto, no endereço
+                eletrônico
+                www.susep.gov.br, a partir do número do Processo Susep informado nessa proposta.
+            </strong></p>
+    </div>
+
+    <div class="section-title">9. IMPORTANTE</div>
+    <p class="text">O Segurado poderá consultar as condições contratuais ou regulamento do produto, no endereço
+        eletrônico www.susep.gov.br, a partir do número do Processo Susep informado nessa proposta.</p>
+    <p class="text">9.1. O registro do produto é automático e não representa aprovação ou recomendação por parte
+        da Susep.</p>
+    <p class="text"><strong>
+            9.2. A Contratação do seguro é opcional, sendo facultado ao segurado o seu cancelamento a
+            qualquer tempo sem qualquer ônus, com devolução do prêmio pago referente ao período a decorrer, se houver.
+        </strong></p>
+    <p class="text">9.3. A devolução de prêmio decorrente de cancelamento é realizada por meio de amortização do
+        saldo devedor do contrato de crédito ou por meio de ressarcimento em conta bancária, conforme previsão
+        contratual.</p>
+    <p class="text">9.4. A aceitação da proposta está sujeita à análise do risco e não implica na aprovação
+        imediata pela Seguradora, uma vez que por força de Legislação, esta possui a prerrogativa de análise e
+        manifestação no prazo de até 15 (quinze) dias, contados do recebimento da proposta.</p>
+    <p class="text"><strong>
+            9.5. Carência: Este seguro possui carência para cobertura de morte por causas naturais
+            considerado em função do prazo de vigência do seguro, sendo até 6 meses - 1 mês de carência // de 7 a 18
+            meses -
+            2 meses de carência // de 19 a 36 meses - 4 meses de carência // de 37 até 120 meses - 6 meses de carência,
+            contados a partir da data de início de vigência do seguro.
+        </strong></p>
+    <p class="text">9.6. Se o segurado for portador de uma deficiência considerada como Invalidez Total, não terá
+        direito a cobertura de Invalidez permanente total por acidente para a condição existente ou novas deficiências
+        em decorrência da primeira.</p>
+    <p class="text">9.7. O segurado deve manter seus dados cadastrais atualizados e em concordância com os
+        critérios de boa fé e veracidade nas declarações e circunstâncias atreladas à contratação do seguro conforme
+        artigo 765 da lei nº 10.406/2022.</p>
+    <p class="text">9.8. Em caso de extinção antecipada da obrigação, o seguro estará automaticamente cancelado,
+        devendo a seguradora ser formalmente comunicada, sem prejuízo, se for o caso, da devolução do prêmio pago
+        referente ao período a decorrer.</p>
+    <p class="text">9.9. Este seguro está estruturado na modalidade de capital segurado fixo, em que o capital
+        segurado não varia o longo da vigência, independentemente da evolução do valor da obrigação.</p>
+    <p class="text">9.10. O segurado poderá consultar a situação cadastral do corretor de seguros e da sociedade
+        seguradora no sítio eletrônico www.susep.gov.br.</p>
+    <p class="text">9.11. Este seguro é garantido pela <strong>
+            Caixa Vida e Previdência S.A. CNPJ: 03.730.204/0001-76 e
+            está registrado na SUSEP sob nº. 15414.617357/2020-99
+        </strong></p>
+    <p class="text">9.12. As Condições Gerais do seguro em sua íntegra, encontram-se disponíveis no site:
+        www.caixavidaeprevidencia.com.br.</p>
+
+    <div class="signature-line">
+        <div class="signature-box">
+            <p>Local e Data</p>
+        </div>
+        <div class="signature-box">
+            <p>Assinatura do Proponente</p>
+        </div>
+        <div class="signature-box-autenticacao">
+            <p>Autenticação Mecânica</p>
+        </div>
+    </div>
+
+    <!-- Página 3 -->
+    <div style="page-break-before: always;"></div>
+
+    <div class="header">
+        <div class="header-logo">
+            <img src="/caixa_vida_previdencia_2d_vertical.png" alt="CAIXA Vida e Previdência" class="logo">
+            <p>Apólice {{apoliceNumero}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title sm">Proposta de Seguro</p>
+                <p>Corretor (No. Registro - SUSEP)</p>
+            </div>
+            <p class="paragrafo">CAIXA SEGURIDADE CORRETAGEM - {{corretora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">SEGURO</p>
+                <p>Cód. Seguradora</p>
+            </div>
+            <p class="paragrafo">{{codigoSeguradora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">PRESTAMISTA</p>
+                <p>Proposta No.</p>
+            </div>
+            <p class="paragrafo">{{propostaNumero}}</p>
+        </div>
+    </div>
+
+    <div class="section-title">CONTATOS DA CAIXA VIDA E PREVIDÊNCIA</div>
+    <p class="text">Para quaisquer INFORMAÇÕES E/OU ESCLARECIMENTOS, a Central de Relacionamento poderá ser
+        acionada, por meio do telefone 0800 702 4000 (ligação gratuita) de segunda à sexta-feira das 8h até 21h.</p>
+    <p class="text">Para acionar o SAC, ligue 0800 702 4280 - Atendimento 24h todos os dias da semana, para
+        dúvidas gerais, obter informações, realizar sugestões, cancelar algum produto ou serviço.</p>
+    <p class="text">Para acionar a Ouvidoria, ligue 0800 702 4240 - Reclamações não atendidas satisfatoriamente
+        por outros canais, ou sugestões e elogios. Para facilitar/agilizar o atendimento da Ouvidoria informe o número
+        de protocolo anterior fornecido pelo SAC ou demais canais de atendimento. Horário de atendimento das 8 às 18
+        horas, de segunda à sexta-feira, exceto feriados nacionais.</p>
+    <p class="text">Central de Atendimento ao Surdo (pós-venda - Informações Gerais, 2ª via de docs, endossos e
+        pagamentos) 0800 702 4260 - Exclusivo para pessoas com deficiência auditiva ou de fala, que buscam por
+        informações ou desejam fazer sugestões, reclamações, cancelamento ou suspensão de serviços e produtos. O
+        atendimento funciona 24h, todos os dias. Como Ouvidoria, funciona das 8h às 18h, de segunda a sexta-feira,
+        exceto em feriados nacionais.</p>
+
+    <div class="signature-line">
+        <div class="signature-box">
+            <p>Local e Data</p>
+        </div>
+        <div class="signature-box">
+            <p>Assinatura do Proponente</p>
+        </div>
+        <div class="signature-box-autenticacao">
+            <p>Autenticação Mecânica</p>
+        </div>
+    </div>
+
+    <!-- Página 4 -->
+    <div style="page-break-before: always;"></div>
+
+
+    <div class="header">
+        <div class="header-logo">
+            <img src="/caixa_vida_previdencia_2d_vertical.png" alt="CAIXA Vida e Previdência" class="logo">
+            <p>Apólice {{apoliceNumero}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title sm">Proposta de Seguro</p>
+                <p>Corretor (No. Registro - SUSEP)</p>
+            </div>
+            <p class="paragrafo">CAIXA SEGURIDADE CORRETAGEM - {{corretora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">SEGURO</p>
+                <p>Cód. Seguradora</p>
+            </div>
+            <p class="paragrafo">{{codigoSeguradora}}</p>
+        </div>
+        <div class="header-div">
+            <div class="title-div">
+                <p class="title">PRESTAMISTA</p>
+                <p>Proposta No.</p>
+            </div>
+            <p class="paragrafo">{{propostaNumero}}</p>
+        </div>
+    </div>
+
+    <div class="section-title">Complemento de Beneficiário</div>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Parentesco</td>
+            <td>Descrição do Parentesco</td>
+            <td>%</td>
+        </tr>
+        {{beneficiariosTable}}
+    </table>
+    <p class="small-text">Não havendo indicação expressa de Beneficiário(s), a indenização será paga por metade ao
+        cônjuge não separado judicialmente e o restante ao(s) Herdeiro(s) Legal(is) do Titular, conforme disposto no
+        artigo 792 do Código Civil Brasileiro</p>
+    <div class="subtitulo">
+        <p><strong>ATENÇÃO : GRAMPEAR ESTA PÁGINA JUNTO A VIA DA
+                AGÊNCIA CAIXA
+            </strong></p>
+    </div>
+
+</body>
+
+</html>
