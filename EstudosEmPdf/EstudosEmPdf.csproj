@@ -7,15 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\output\**" />
     <Compile Remove="wwwroot\templates\**" />
+    <Content Remove="wwwroot\output\**" />
     <Content Remove="wwwroot\templates\**" />
+    <EmbeddedResource Remove="wwwroot\output\**" />
     <EmbeddedResource Remove="wwwroot\templates\**" />
+    <None Remove="wwwroot\output\**" />
     <None Remove="wwwroot\templates\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\output\entrada.html" />
-    <Content Remove="wwwroot\output\saida.pdf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,10 +24,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\output\" />
   </ItemGroup>
 
 </Project>

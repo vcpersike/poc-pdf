@@ -23,6 +23,8 @@ namespace EstudosEmPdf.Models
         public string DataProposta { get; set; }
         public string Agencia { get; set; }
         public string MatriculaDV { get; set; }
+        public string Logradouro { get; set; }
+        public string LogoPath { get; set; }
 
         public List<Beneficiario> Beneficiarios { get; set; }
 

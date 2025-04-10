@@ -13,7 +13,13 @@ namespace EstudosEmPdf.Services
         {
             _environment = environment;
            
-        }        
+        }
+
+        private string TryGet(JsonElement element, string key)
+        {
+            return element.TryGetProperty(key, out var value) ? value.GetString() ?? "" : "";
+        }
+
 
         public HtmlViewModel GetPageById(string id)
         {
@@ -23,7 +29,7 @@ namespace EstudosEmPdf.Services
 
             foreach (var page in data.GetProperty("pages").EnumerateArray())
             {
-                if (page.GetProperty("id").GetString() == id)
+                if (TryGet(page, "id") == id)
                 {
                     var beneficiarios = new List<Beneficiario>();
                     if (page.TryGetProperty("beneficiarios", out var benefArray))
@@ -32,37 +38,39 @@ namespace EstudosEmPdf.Services
                         {
                             beneficiarios.Add(new Beneficiario
                             {
-                                Nome = b.GetProperty("nome").GetString(),
-                                Parentesco = b.GetProperty("parentesco").GetString(),
-                                Descricao = b.GetProperty("descricao").GetString(),
-                                Porcentagem = b.GetProperty("porcentagem").GetString()
+                                Nome = TryGet(b, "nome"),
+                                Parentesco = TryGet(b, "parentesco"),
+                                Descricao = TryGet(b, "descricao"),
+                                Porcentagem = TryGet(b, "porcentagem")
                             });
                         }
                     }
 
                     return new HtmlViewModel
                     {
-                        Title = page.GetProperty("title").GetString(),
-                        ApoliceNumero = page.GetProperty("apoliceNumero").GetString(),
-                        Corretora = page.GetProperty("corretora").GetString(),
-                        CodigoSeguradora = page.GetProperty("codigoSeguradora").GetString(),
-                        PropostaNumero = page.GetProperty("propostaNumero").GetString(),
-                        NomeProponente = page.GetProperty("nomeProponente").GetString(),
-                        CPF = page.GetProperty("cpf").GetString(),
-                        DataNascimento = page.GetProperty("dataNascimento").GetString(),
-                        Idade = page.GetProperty("idade").GetString(),
-                        NumeroRg = page.GetProperty("numeroRg").GetString(),
-                        DataExpedicao = page.GetProperty("dataExpedicao").GetString(),
-                        OrgaoEmissor = page.GetProperty("orgaoEmissor").GetString(),
-                        UF = page.GetProperty("uf").GetString(),
-                        Sexo = page.GetProperty("sexo").GetString(),
-                        EstadoCivil = page.GetProperty("estadoCivil").GetString(),
-                        CapitalSegurado = page.GetProperty("capital_segurado").GetString(),
-                        PremioMorteCausasNaturais = page.GetProperty("premio_morte_causas_naturais").GetString(),
-                        PremioInvalidezPermanenteAcidente = page.GetProperty("premio_invalidez_permanente_acidente").GetString(),
-                        DataProposta = page.GetProperty("dataProposta").GetString(),
-                        Agencia = page.GetProperty("agencia").GetString(),
-                        MatriculaDV = page.GetProperty("matricula_dv").GetString(),
+                        Title = TryGet(page, "title"),
+                        ApoliceNumero = TryGet(page, "apoliceNumero"),
+                        Corretora = TryGet(page, "corretora"),
+                        CodigoSeguradora = TryGet(page, "codigoSeguradora"),
+                        PropostaNumero = TryGet(page, "propostaNumero"),
+                        NomeProponente = TryGet(page, "nomeProponente"),
+                        CPF = TryGet(page, "cpf"),
+                        DataNascimento = TryGet(page, "dataNascimento"),
+                        Idade = TryGet(page, "idade"),
+                        NumeroRg = TryGet(page, "numeroRg"),
+                        DataExpedicao = TryGet(page, "dataExpedicao"),
+                        OrgaoEmissor = TryGet(page, "orgaoEmissor"),
+                        UF = TryGet(page, "uf"),
+                        Sexo = TryGet(page, "sexo"),
+                        EstadoCivil = TryGet(page, "estadoCivil"),
+                        CapitalSegurado = TryGet(page, "capital_segurado"),
+                        PremioMorteCausasNaturais = TryGet(page, "premio_morte_causas_naturais"),
+                        PremioInvalidezPermanenteAcidente = TryGet(page, "premio_invalidez_permanente_acidente"),
+                        DataProposta = TryGet(page, "dataProposta"),
+                        Agencia = TryGet(page, "agencia"),
+                        MatriculaDV = TryGet(page, "matricula_dv"),
+                        Logradouro = TryGet(page, "logradouro"),
+                        LogoPath = TryGet(page, "logoPath"),
                         Beneficiarios = beneficiarios
                     };
                 }
@@ -70,6 +78,7 @@ namespace EstudosEmPdf.Services
 
             return null;
         }
+
 
         public string RenderHtml(string id)
         {
@@ -82,6 +91,9 @@ namespace EstudosEmPdf.Services
 
             var templatePath = Path.Combine(_environment.ContentRootPath, "Data", "template.html");
             var template = File.ReadAllText(templatePath);
+            var imagePath = Path.Combine(_environment.WebRootPath, "images", "caixa_vida_previdencia_2d_vertical.png");
+            string base64Image = Convert.ToBase64String(File.ReadAllBytes(imagePath));
+            string imageDataUri = $"data:image/png;base64,{base64Image}";
 
             var beneficiariosHtml = "";
             foreach (var b in page.Beneficiarios)
@@ -116,6 +128,8 @@ namespace EstudosEmPdf.Services
                 .Replace("{{dataProposta}}", page.DataProposta)
                 .Replace("{{agencia}}", page.Agencia)
                 .Replace("{{matricula_dv}}", page.MatriculaDV)
+                .Replace("{{logradouro}}", page.Logradouro)
+                .Replace("{{logoPath}}", imageDataUri)
                 .Replace("{{beneficiariosTable}}", beneficiariosHtml);
 
 
@@ -144,6 +158,10 @@ namespace EstudosEmPdf.Services
             var templatePath = Path.Combine(_environment.ContentRootPath, "Data", "template.html");
             var template = File.ReadAllText(templatePath);
 
+            var imagePath = Path.Combine(_environment.WebRootPath, "images", "caixa_vida_previdencia_2d_vertical.png");
+            string base64Image = Convert.ToBase64String(File.ReadAllBytes(imagePath));
+            string imageDataUri = $"data:image/png;base64,{base64Image}";
+
             var beneficiariosHtml = "";
             foreach (var b in page.Beneficiarios)
             {
@@ -177,6 +195,8 @@ namespace EstudosEmPdf.Services
                 .Replace("{{dataProposta}}", page.DataProposta)
                 .Replace("{{agencia}}", page.Agencia)
                 .Replace("{{matricula_dv}}", page.MatriculaDV)
+                .Replace("{{logradouro}}", page.Logradouro)
+                .Replace("{{logoPath}}", imageDataUri)
                 .Replace("{{beneficiariosTable}}", beneficiariosHtml);
 
             var cssPath = Path.Combine(_environment.WebRootPath, "css", "styles.css");

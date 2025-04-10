@@ -1,4 +1,5 @@
 body {
+    
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 11px;
     line-height: 1.2;
@@ -7,14 +8,26 @@ body {
 
 @page {
     size: A4;
-    margin: 0;
+    margin-top: 8px;
 }
 
 @media print {
     body {
-        margin: 3mm;
+        position: relative;
+        margin-inline: 3mm;
         padding: 0;
     }
+    section {
+        margin: 0 auto;
+        width: 200mm;
+        min-height: 290mm;
+        position: relative;
+    }
+
+        section .signature-line {
+            position: absolute;
+            bottom: 0;
+        }
 }
 
 .logo {
@@ -37,13 +50,13 @@ body {
     text-align: right;
 }
 
-.header .header-div .paragrafo{
-    margin-top: 0px;
-    padding-inline: 38px;
-    border: #000 solid 1.2px;
-    border-top: none;
-    text-align: center;
-}
+.header .header-div .paragrafo {
+        margin-top: 0;
+        padding-inline: 38px;
+        border: #000 solid 1.2px;
+        border-top: none;
+        text-align: center;
+    }
 
 table tr th {
     border: none;
@@ -56,7 +69,7 @@ table tr td {
 }
 
 .title {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     margin: 0;
     color: #005ca9;
@@ -76,21 +89,23 @@ table tr td {
 }
 
 .section-title {
-    padding: 5px;
     font-weight: bold;
-    margin-top: 0.5rem;
+    margin-top: 0;
     font-size: 12px;
 }
 
-.subtitulo{
+.subtitulo {
     text-align: center;
+}
+
+.subtitulo p{
+    margin: 0;
 }
 
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 8px;
 }
 
 .tabelas-col-2 {
@@ -133,21 +148,24 @@ th, td {
 
 .signature-line {
     display: flex;
+    width:200mm;
     justify-content: space-between;
     margin-top: 40px;
     gap: 20px;
 }
 
 .signature-box {
-    width: 300px;
+    width: 200px;
     text-align: center;
     padding-top: 5px;
     font-size: 12px;
+   
 }
 
-.signature-box p{
-    border-top: 1px solid #000;
-}
+    .signature-box p {
+        border-top: 1px solid #000;
+        margin-bottom: 0;
+    }
 
 .signature-box-autenticacao{
     border-top: 1px solid #000;
@@ -168,3 +186,48 @@ th, td {
     width: 220px;
     left: calc(50% - 110px);
 }
+
+#item-1, 
+#item-2,
+#item-5,
+#item-6, 
+#item-9  {
+    position: relative;
+}
+
+#cnpj-vert-text,
+#susep-vert-text,
+#cod-vert-text,
+#prest-vert-text,
+#data-vert-text,
+#via-cliente-vert-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    position: absolute;
+    font-size: 8px;
+    left: -24px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+#cnpj-vert-text{
+    top: 86px;
+}
+
+#data-vert-text{
+    right: -23px;
+    top: 100px;
+}
+
+#cod-vert-text{
+    top: 16px;
+
+}
+
+#prest-vert-text{
+    top: 100px;
+}
+
+#via-cliente-vert-text{
+    top: 24px;
+}   
+
