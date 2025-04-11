@@ -71,6 +71,27 @@ namespace EstudosEmPdf.Services
                         MatriculaDV = TryGet(page, "matricula_dv"),
                         Logradouro = TryGet(page, "logradouro"),
                         LogoPath = TryGet(page, "logoPath"),
+                        Cep = TryGet(page, "cep"),
+                        Bairro = TryGet(page, "bairro"),
+                        Cidade = TryGet(page, "cidade"),
+                        Email = TryGet(page, "email"),
+                        DDD_primeiro = TryGet(page, "ddd_primeiro"),
+                        Telefone_primeiro = TryGet(page, "telefone_primeiro"),
+                        DDD_segundo = TryGet(page, "ddd_segundo"),
+                        Telefone_segundo = TryGet(page, "telefone_segundo"),
+                        DDD_celular = TryGet(page, "telefone_celular"),
+                        Celular = TryGet(page, "telefone_celular"),
+                        Pagamento_tipo = TryGet(page, "pagamento_tipo"),
+                        Pagamento_meses = TryGet(page, "pagamento_meses"),
+                        Premio_total = TryGet(page, "premio_total"),
+                        Operacao_cobertura = TryGet(page, "operacao_cobertura"),
+                        NumeroContrato = TryGet(page, "numeroContrato"),
+                        Cnpj = TryGet(page, "cnpj"),
+                        Susep = TryGet(page, "susep"),
+                        CodProd = TryGet(page, "codProd"),
+                        ViaCliente = TryGet(page, "viaCliente"),
+                        Data = TryGet(page, "data"),
+                        Prest = TryGet(page, "prest"),
                         Beneficiarios = beneficiarios
                     };
                 }
@@ -130,6 +151,27 @@ namespace EstudosEmPdf.Services
                 .Replace("{{matricula_dv}}", page.MatriculaDV)
                 .Replace("{{logradouro}}", page.Logradouro)
                 .Replace("{{logoPath}}", imageDataUri)
+                .Replace("{{cep}}", page.Cep)
+                .Replace("{{bairro}}", page.Bairro)
+                .Replace("{{cidade}}", page.Cidade)
+                .Replace("{{email}}", page.Email)
+                .Replace("{{ddd_primeiro}}", page.DDD_primeiro)
+                .Replace("{{telefone_primeiro}}", page.Telefone_primeiro)
+                .Replace("{{ddd_segundo}}", page.DDD_segundo)
+                .Replace("{{telefone_segundo}}", page.Telefone_segundo)
+                .Replace("{{ddd_celular}}", page.DDD_celular)
+                .Replace("{{telefone_celular}}", page.Celular)
+                .Replace("{{pagamento_tipo}}", page.Pagamento_tipo)
+                .Replace("{{pagamento_meses}}", page.Pagamento_meses)
+                .Replace("{{premio_total}}", page.Premio_total)
+                .Replace("{{operacao_cobertura}}", page.Operacao_cobertura)
+                .Replace("{{numeroContrato}}", page.NumeroContrato)
+                .Replace("{{cnpj}}", page.Cnpj)
+                .Replace("{{susep}}", page.Susep)
+                .Replace("{{codProd}}", page.CodProd)
+                .Replace("{{viaCliente}}", page.ViaCliente)
+                .Replace("{{data}}", page.Data)
+                .Replace("{{prest}}", page.Prest)
                 .Replace("{{beneficiariosTable}}", beneficiariosHtml);
 
 
@@ -197,6 +239,28 @@ namespace EstudosEmPdf.Services
                 .Replace("{{matricula_dv}}", page.MatriculaDV)
                 .Replace("{{logradouro}}", page.Logradouro)
                 .Replace("{{logoPath}}", imageDataUri)
+                .Replace("{{cep}}", page.Cep)
+                .Replace("{{bairro}}", page.Bairro)
+                .Replace("{{cidade}}", page.Cidade)
+                .Replace("{{email}}", page.Email)
+                .Replace("{{ddd_primeiro}}", page.DDD_primeiro)
+                .Replace("{{telefone_primeiro}}", page.Telefone_primeiro)
+                .Replace("{{ddd_segundo}}", page.DDD_segundo)
+                .Replace("{{ddd_segundo}}", page.DDD_segundo)
+                .Replace("{{telefone_segundo}}", page.Telefone_segundo)
+                .Replace("{{ddd_celular}}", page.DDD_celular)
+                .Replace("{{telefone_celular}}", page.Celular)
+                .Replace("{{pagamento_tipo}}", page.Pagamento_tipo)
+                .Replace("{{pagamento_meses}}", page.Pagamento_meses)
+                .Replace("{{premio_total}}", page.Premio_total)
+                .Replace("{{operacao_cobertura}}", page.Operacao_cobertura)
+                .Replace("{{numeroContrato}}", page.NumeroContrato)
+                .Replace("{{cnpj}}", page.Cnpj)
+                .Replace("{{susep}}", page.Susep)
+                .Replace("{{codProd}}", page.CodProd)
+                .Replace("{{viaCliente}}", page.ViaCliente)
+                .Replace("{{data}}", page.Data)
+                .Replace("{{prest}}", page.Prest)
                 .Replace("{{beneficiariosTable}}", beneficiariosHtml);
 
             var cssPath = Path.Combine(_environment.WebRootPath, "css", "styles.css");

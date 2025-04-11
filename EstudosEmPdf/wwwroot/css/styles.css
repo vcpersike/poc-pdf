@@ -204,8 +204,8 @@ th, td {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     position: absolute;
-    font-size: 8px;
-    left: -24px;
+    font-size: 6px;
+    left: -18px;
     letter-spacing: 2px;
     white-space: nowrap;
 }
@@ -214,12 +214,12 @@ th, td {
 }
 
 #data-vert-text{
-    right: -23px;
+    right: -18px;
     top: 100px;
 }
 
 #cod-vert-text{
-    top: 16px;
+    top: 8px;
 
 }
 
@@ -228,6 +228,6 @@ th, td {
 }
 
 #via-cliente-vert-text{
-    top: 24px;
+    top: 68px;
 }   
 

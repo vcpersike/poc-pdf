@@ -25,6 +25,28 @@ namespace EstudosEmPdf.Models
         public string MatriculaDV { get; set; }
         public string Logradouro { get; set; }
         public string LogoPath { get; set; }
+        public string Cep { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string Email { get; set; }
+        public string DDD_primeiro { get; set; }
+        public string DDD_segundo { get; set; }
+        public string DDD_celular { get; set; }
+        public string Telefone_primeiro { get; set; }
+        public string Telefone_segundo { get; set; }
+        public string Celular { get; set; }
+        public string Pagamento_tipo { get; set; }
+        public string Pagamento_meses { get; set; }
+        public string Premio_total { get; set; }
+        public string Operacao_cobertura { get; set; }
+        public string NumeroContrato { get; set; }
+        public string Cnpj { get; set; }
+        public string Susep { get; set; }
+        public string CodProd { get; set; }
+        public string ViaCliente { get; set; }
+        public string Data { get; set; }
+        public string Prest { get; set; }
+
 
         public List<Beneficiario> Beneficiarios { get; set; }
 
